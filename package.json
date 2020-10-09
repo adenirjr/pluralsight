@@ -5,18 +5,9 @@
   "author": "Adenir Junior",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node lib/server.js",
+    "dev": "set NODE_PATH=./lib&& nodemon --exec babel-node lib/server.js",
     "webpack": "webpack -wd",
     "test": "jest --watchAll"
-  },
-  "babel": {
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ],
-    "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ]
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -35,6 +26,7 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.11.5",
+    "axios": "^0.20.0",
     "babel-loader": "^8.1.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
